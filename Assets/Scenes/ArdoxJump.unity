@@ -175,8 +175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cylinder: {fileID: 4250201468891687382, guid: cbea4392913a7c7498fa0606f0fa10a0,
     type: 3}
-  numberRings: 500
-  maxDistance: 1.8
+  numberRings: 60
+  maxDistance: 1.5
   bestScore: 0
   currentScore: 0
 --- !u!1001 &431625212

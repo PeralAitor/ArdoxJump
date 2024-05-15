@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ballMovement : MonoBehaviour
 {
     public float speed = 2f;
-    public Rigidbody rigidbody;
+    public Rigidbody rigid;
     public GameObject splash;
 
     [HideInInspector]
@@ -19,9 +19,9 @@ public class ballMovement : MonoBehaviour
     void Start()
     {
         
-        if (rigidbody == null)
+        if (rigid == null)
         {
-            rigidbody = GetComponent<Rigidbody>();
+            rigid = GetComponent<Rigidbody>();
         }
     }
 
@@ -36,7 +36,7 @@ public class ballMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision) 
     {
         Time.timeScale = 0.5f;
-        rigidbody.velocity = new Vector3(0, speed*2, 0)* Time.timeScale;
+        rigid.velocity = new Vector3(0, speed*2, 0)* Time.timeScale;
         
         GameObject newSplash = Instantiate(splash, new Vector3(transform.position.x, collision.transform.position.y + 0.14f, transform.position.z), 
         splash.transform.rotation) as GameObject;
